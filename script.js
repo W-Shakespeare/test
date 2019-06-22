@@ -1,11 +1,10 @@
 const filterByExpiration = items => {
-  let date = new Date();
-  let year = date.getFullYear();
-  let month = date.getMonth() + 1;
-  let day = date.getDate();
+  let today = new Date();
+  let year = today.getFullYear();
+  let month = today.getMonth() + 1;
+  let day = today.getDate();
   let resultItems = items.reduce((acc, next) => {
     if (filterArrItems(createArrItems(next))) {
-      debugger;
       acc.push(next);
       return acc;
     }
@@ -17,20 +16,12 @@ const filterByExpiration = items => {
   }
   function filterArrItems(arrItem) {
     let [m, d, y] = arrItem;
-    if (y > year) {
+    let date = new Date();
+    date.setFullYear(y);
+    date.setMonth(+m - 1);
+    date.setDate(d);
+    if (today < date) {
       return true;
-    } else if (y == year) {
-      if (m > month) {
-        return true;
-      } else if (m == month) {
-        if (d > day) {
-          return true;
-        } else {
-          return false;
-        }
-      } else {
-        return false;
-      }
     } else {
       return false;
     }
