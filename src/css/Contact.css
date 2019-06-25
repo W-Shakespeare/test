@@ -130,7 +130,7 @@
 .form-send {
   padding-top: 7px;
   display: flex;
-  justify-content: center;
+  justify-content: center !important;
   align-items: center;
 }
 
