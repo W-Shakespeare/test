@@ -1,0 +1,163 @@
+.contact {
+  background-color: #fafafa;
+  padding-top: 39px;
+  text-align: center;
+}
+.contact-form {
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  width: 600px;
+}
+
+.form-string {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-group {
+  position: relative;
+  padding: 8px 0;
+  z-index: 10;
+}
+
+.form-label {
+  position: absolute;
+  top: 28px;
+  left: 20px;
+  z-index: 1;
+  transition: 0.3s;
+  color: #061e37;
+  font-weight: 500;
+  font-size: 14px;
+  z-index: -1;
+}
+
+.form-text {
+  padding: 0 20px;
+  background-color: transparent;
+  width: 240px;
+  height: 50px;
+  border-radius: 5px;
+  border: 2px solid #90a4ae;
+  outline: none;
+  transition: 0.3s;
+  font-size: 16px;
+  color: #061e37;
+}
+
+.form-text:focus {
+  border: 2px solid #061e37;
+}
+
+.form-text:focus ~ .form-label,
+.form-text:not(:placeholder-shown) ~ .form-label {
+  top: 15px;
+  font-size: 10px;
+  color: #90a4ae;
+}
+
+.form-message {
+  font-family: "Raleway";
+  padding: 20px;
+  background-color: transparent;
+  width: 560px;
+  height: 110px;
+  border-radius: 5px;
+  border: 2px solid #90a4ae;
+  outline: none;
+  transition: 0.3s;
+  font-size: 16px;
+  color: #061e37;
+  font-weight: 500;
+  resize: none;
+}
+
+.form-message:focus {
+  border: 2px solid #061e37;
+}
+
+.form-message:focus ~ .form-label,
+.form-message:not(:placeholder-shown) ~ .form-label {
+  top: 15px;
+  font-size: 10px;
+  color: #90a4ae;
+}
+
+.form-checkbox {
+  display: none;
+}
+
+.checkbox-label {
+  padding-left: 10px;
+  color: #061e37;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: -0.1px;
+}
+
+.checkbox-label::before {
+  content: "";
+  display: inline-block;
+  background: transparent;
+  width: 13px;
+  height: 13px;
+  border: 2px solid #90a4ae;
+  border-radius: 3px;
+  vertical-align: middle;
+  margin-left: -10px;
+  margin-right: 10px;
+  margin-bottom: 2px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.form-checkbox:checked + .checkbox-label:before {
+  border: 2px solid #061e37;
+  content: "\f00c";
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  font-size: 10px;
+  color: #061e37;
+  text-align: center;
+  line-height: 15px;
+}
+
+.form-send {
+  padding-top: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button_send {
+  padding: 10px 73px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+  background-color: #1de9b6;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.button_send:hover {
+  color: #fff;
+  background-color: #061e37;
+}
+
+.button_send:active {
+  background-color: #ffffff;
+  color: #061e37;
+  box-shadow: inset 2px 2px 7px gray, inset -2px -2px 7px gray;
+}
