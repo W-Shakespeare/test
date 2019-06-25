@@ -6,10 +6,9 @@ function FormSendContainer() {
 }
 
 function send() {
-  let form = document.getElementsByClassName("form")[0];
-  let formNameValue = form[0].value;
-  let formEmailValue = form[1].value;
-  let formCommentValue = form[2].value;
+  let formNameValue = document.getElementById("InputName").value;
+  let formEmailValue = document.getElementById("InputEmail").value;
+  let formCommentValue = document.getElementById("InputComment").value;
 
   fetch("https://formula-test-api.herokuapp.com/contact", {
     method: "POST",
